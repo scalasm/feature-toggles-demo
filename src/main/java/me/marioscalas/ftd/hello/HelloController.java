@@ -11,7 +11,6 @@ package me.marioscalas.ftd.hello;
 import lombok.RequiredArgsConstructor;
 import me.marioscalas.ftd.annotation.FeatureToggle;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

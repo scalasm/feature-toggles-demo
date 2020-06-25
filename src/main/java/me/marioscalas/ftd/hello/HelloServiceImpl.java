@@ -9,10 +9,12 @@
 package me.marioscalas.ftd.hello;
 
 import me.marioscalas.ftd.annotation.FeatureToggle;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Service;
 
 @FeatureToggle( "hello" )
 @Service
+@ConditionalOnProperty( value = "ftd.feature.hello", matchIfMissing = true, havingValue = "true" )
 public class HelloServiceImpl implements HelloService {
     @Override
     public Hello getSalute() {

@@ -1,0 +1,24 @@
+##
+## Test feature toggles.
+## I disable every feature explicitly so that tests are not influenced by cross features
+##
+ftd:
+  feature:
+    hello: false
+    other: false
+
+spring:
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    root: warn
+    # The following two classes can be set to 'debug' so that you can see the components picked up by Spring at runtime
+    org.springframework.boot.context.config.ConfigFileApplicationListener: debug
+    org.springframework.context.annotation.ClassPathBeanDefinitionScanner: debug
+    org.springframework: warn
+    org.springframework.cache: warn
+    org.springframework.web: warn
+    org.springframework.test: warn
+    org.apache.ibatis: warn

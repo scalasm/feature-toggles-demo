@@ -1,0 +1,8 @@
+##
+## Feature toggles.
+## Note that I'm explicitly enabling the 'hello' feature here: this is not required because features not
+## explicitly disabled are considered to be enabled by default.
+##
+ftd:
+  feature:
+    hello: true

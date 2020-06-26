@@ -4,6 +4,8 @@ Feature toggles help modularizing application in logical slices that can be cond
 
 Spring supports this ability by using the `@ConditionalOnXXX`, like `@ConditionalOnProperty` and [others](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/condition/package-summary.html).
 
+This repository is the companion source location for the [Medium article](https://medium.com/@marioscalas/simple-feature-toggles-with-spring-boot-4153fc9ab4b9) I wrote about the subject.
+
 ## Implementation
 My initial idea was to leverage the @ConditionalOnProperty but [I wasn't able to make it work](https://stackoverflow.com/questions/62579394/can-i-use-conditionalproperty-with-my-custom-annotation-to-avoid-repeating-conf). 
 So I wanted to learn more and came out with this implementation, centered on the `FeatureToggle` annotation: it supports my use cases and it's simple 

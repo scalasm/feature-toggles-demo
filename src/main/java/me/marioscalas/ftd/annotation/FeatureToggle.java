@@ -56,7 +56,7 @@ public @interface FeatureToggle {
             boolean missing = propertyValue == null;
             boolean definedWithoutValue = "".equals( propertyValue );
             boolean explicitlyEnabled = parseBoolean( propertyValue );
-            boolean featureIsEnabled = (missing || definedWithoutValue) || explicitlyEnabled;
+            boolean featureIsEnabled = missing || definedWithoutValue || explicitlyEnabled;
 
             return featureIsEnabled;
         }
